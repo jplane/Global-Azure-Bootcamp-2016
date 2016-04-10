@@ -1,6 +1,6 @@
 # Global Azure Bootcamp 2016 - Service Fabric
 
-[slides][gab2016 - service fabric.pptx]
+[slides](gab-2016-sf.pptx)
 
 ## Lab Instructions
 
@@ -11,11 +11,11 @@ The WordCount sample app provides an introduction to using reliable collections 
 1. VS2015 Community Edition - download [here](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx) and install
 2. Azure SDK - download [here](https://go.microsoft.com/fwlink/?linkid=518003&clcid=0x409) and install (be sure you have the latest version)
 3. Service Fabric SDK - download [here](http://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=MicrosoftAzure-ServiceFabric-VS2015) and install (be sure you have the latest version)
-3. Clone or download lab code [here]()
+4. Clone or download lab code [here](https://github.com/jplane/Global-Azure-Bootcamp-2016)
 
 ### Review the application code
 
-1. 
+1.  
 
 ### Review the Service Fabric configuration
 
