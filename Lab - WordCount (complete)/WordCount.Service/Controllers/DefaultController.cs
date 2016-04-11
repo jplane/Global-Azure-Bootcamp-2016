@@ -3,6 +3,10 @@
 //  Licensed under the MIT License (MIT). See License.txt in the repo root for license information.
 // ------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
 namespace WordCountService.Controllers
 {
     using System.Threading.Tasks;
@@ -42,6 +46,32 @@ namespace WordCountService.Controllers
         }
 
         // TODO: add FindDups() service method...
+
+        [HttpGet]
+        [Route("FindDups")]
+        public async Task<IHttpActionResult> FindDups()
+        {
+            var wordCountDictionary = await this.stateManager.GetOrAddAsync<IReliableDictionary<string, long>>("wordCountDictionary");
+
+            using (var tx = this.stateManager.CreateTransaction())
+            {
+                var enumerator = (await wordCountDictionary.CreateEnumerableAsync(tx)).GetAsyncEnumerator();
+
+                var dups = new List<Tuple<string, long>>();
+
+                while(await enumerator.MoveNextAsync(CancellationToken.None))
+                {
+                    var item = enumerator.Current;
+
+                    if (item.Value > 1)
+                    {
+                        dups.Add(Tuple.Create(item.Key, item.Value));
+                    }
+                }
+
+                return this.Ok(dups.ToArray());
+            }
+        }
 
         [HttpPut]
         [Route("AddWord/{word}")]

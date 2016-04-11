@@ -56,9 +56,21 @@
             var CountTask = setInterval(function () { Count(); }, 350);
             var AddWordTask = setInterval(function () { SendWords(); }, 200);
             // TODO: add FindDupsTask...
+            var FindDupsTask = setInterval(function() { FindDups(); }, 500);
         });
 
         // TODO: add FindDups() method...
+
+        function FindDups() {
+            $.ajax({
+                url: serviceUrl + '/api/FindDups?c=' + Math.random(),   // use random number to eliminate GET caching
+                dataType: 'text',
+                method: 'GET'
+            })
+           .done(function (dupResult) {
+               $('#dupResult').html(dupResult);
+           });
+        }
 
         function SendWords()
         {
@@ -90,7 +102,7 @@
 
             // TODO: reduce number of characters per word to make dups appear more often...
 
-            for (var i = 0; i < 5; i++)
+            for( var i=0; i < 3; i++ )
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
 
             return text;
@@ -100,5 +112,6 @@
     <div id="sendResult"></div>
     <div id="count"></div>
     // TODO: add a new DIV for the duplicate results...
+    <div id="dupResult"></div>
 </body>
 </html>

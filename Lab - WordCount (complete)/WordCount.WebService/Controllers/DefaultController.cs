@@ -94,7 +94,62 @@ namespace WordCount.WebService.Controllers
             };
         }
 
-        // TODO: add FindDups() service method...
+        // TODO: add FindDups service method...
+
+        [HttpGet]
+        [Route("FindDups")]
+        public async Task<HttpResponseMessage> FindDups()
+        {
+            // For each partition client, keep track of partition information and the number of words
+            var dups = new ConcurrentDictionary<Int64RangePartitionInformation, Tuple<string, long>[]>();
+
+            foreach (var partition in await this.GetServicePartitionKeysAsync())
+            {
+                try
+                {
+                    var partitionClient =
+                        new ServicePartitionClient<HttpCommunicationClient>(_communicationFactory, _serviceUri, new ServicePartitionKey(partition.LowKey));
+
+                    await partitionClient.InvokeWithRetryAsync(
+                        async client =>
+                        {
+                            var response = await client.HttpClient.GetAsync(new Uri(client.Url, "FindDups"));
+                            var content = await response.Content.ReadAsAsync<Tuple<string, long>[]>();
+                            dups[partition] = content;
+                        });
+                }
+                catch (Exception ex)
+                {
+                    ServiceEventSource.Current.OperationFailed(ex.Message, "Count - run web request");
+                }
+            }
+
+            var sb = new StringBuilder();
+            sb.Append("<h1>Duplicates</h1>");
+            sb.Append("<table><tr><td>Partition ID</td><td>Key Range</td><td>Word</td><td>Total</td></tr>");
+            foreach (var partitionData in dups.OrderBy(partitionData => partitionData.Key.LowKey))
+            {
+                foreach (var dup in partitionData.Value)
+                {
+                    sb.Append("<tr><td>");
+                    sb.Append(partitionData.Key.Id);
+                    sb.Append("</td><td>");
+                    sb.AppendFormat("{0} - {1}", partitionData.Key.LowKey, partitionData.Key.HighKey);
+                    sb.Append("</td><td>");
+                    sb.Append(dup.Item1);
+                    sb.Append("</td><td>");
+                    sb.Append(dup.Item2);
+                    sb.Append("</td></tr>");
+                }
+            }
+
+            sb.Append("</table>");
+
+            return new HttpResponseMessage()
+            {
+                Content = new StringContent(sb.ToString(), Encoding.UTF8, "text/html")
+            };
+        }
 
         [HttpPost]
         [Route("AddWord/{word}")]
