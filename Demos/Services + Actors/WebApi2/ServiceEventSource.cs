@@ -9,7 +9,7 @@ using Microsoft.ServiceFabric.Services.Runtime;
 
 namespace WebApi2
 {
-    [EventSource(Name = "MyCompany-DemoApp-WebApi2")]
+    [EventSource(Name = "MyCompany-DemoApp2-WebApi2")]
     internal sealed class ServiceEventSource : EventSource
     {
         public static readonly ServiceEventSource Current = new ServiceEventSource();

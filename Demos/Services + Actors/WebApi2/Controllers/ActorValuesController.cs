@@ -11,7 +11,7 @@ namespace WebApi2.Controllers
 {
     public class ActorValuesController : ApiController
     {
-        private static Uri serviceUri = new Uri("fabric:/DemoApp/Actor1ActorService");
+        private static Uri serviceUri = new Uri("fabric:/DemoApp2/Actor1ActorService");
 
         // GET api/values/5 
         public async Task<string> Get(int id)
