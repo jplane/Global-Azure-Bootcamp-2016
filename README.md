@@ -4,7 +4,7 @@
 
 ## Lab Instructions
 
-The WordCount sample app provides an introduction to using reliable collections and to partitioning stateful services. A client-side JavaScript function generates random five-character strings, which are then sent to the application via an ASP.NET WebAPI to be counted. The stateless web service resolves the endpoint for the stateful service's partition based on the first character of the string. The stateful service maintains a backlog of words to count in a 'ReliableQueue' and then keeps track of their count in a 'ReliableDictionary'. The total count, plus a per-partition count, are shown in the web UI at [http://localhost:8081/WordCount/](http://localhost:8081/WordCount/) (for a locally deployed app instance).
+The WordCount sample app provides an introduction to using reliable collections and to partitioning stateful services. A client-side JavaScript function generates random five-character strings, which are then sent to the application via an ASP.NET WebAPI to be counted. The stateless web service resolves the endpoint for the stateful service's partition based on the first character of the string. The stateful service maintains a backlog of words to count in a [ReliableQueue](https://msdn.microsoft.com/en-us/library/azure/dn971527.aspx) and then keeps track of their count in a [ReliableDictionary](https://msdn.microsoft.com/en-us/library/azure/dn971511.aspx). The total count, plus a per-partition count, are shown in the web UI at [http://localhost:8081/WordCount/](http://localhost:8081/WordCount/) (for a locally deployed app instance).
 
 ### Pre-requisites
 
