@@ -7,10 +7,6 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "DemoApp", "DemoApp\DemoApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi1", "WebApi1\WebApi1.csproj", "{C805043A-7EDB-45FF-81BD-F2FC8932682D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actor1", "Actor1\Actor1.csproj", "{65B5D47C-A99F-4E43-9678-6C736D904808}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actor1.Interfaces", "Actor1.Interfaces\Actor1.Interfaces.csproj", "{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,14 +23,6 @@ Global
 		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Debug|x64.Build.0 = Debug|x64
 		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Release|x64.ActiveCfg = Release|x64
 		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Release|x64.Build.0 = Release|x64
-		{65B5D47C-A99F-4E43-9678-6C736D904808}.Debug|x64.ActiveCfg = Debug|x64
-		{65B5D47C-A99F-4E43-9678-6C736D904808}.Debug|x64.Build.0 = Debug|x64
-		{65B5D47C-A99F-4E43-9678-6C736D904808}.Release|x64.ActiveCfg = Release|x64
-		{65B5D47C-A99F-4E43-9678-6C736D904808}.Release|x64.Build.0 = Release|x64
-		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Debug|x64.ActiveCfg = Debug|x64
-		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Debug|x64.Build.0 = Debug|x64
-		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Release|x64.ActiveCfg = Release|x64
-		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

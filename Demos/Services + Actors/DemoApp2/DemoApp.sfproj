@@ -15,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Actor1\Actor1.csproj" />
-    <ProjectReference Include="..\WebApi1\WebApi1.csproj" />
+    <ProjectReference Include="..\WebApi2\WebApi2.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets" />
 </Project>

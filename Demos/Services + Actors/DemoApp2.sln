@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actor1", "Actor1\Actor1.csproj", "{65B5D47C-A99F-4E43-9678-6C736D904808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actor1.Interfaces", "Actor1.Interfaces\Actor1.Interfaces.csproj", "{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}"
+EndProject
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "DemoApp", "DemoApp2\DemoApp.sfproj", "{1A0E4A45-6639-49AE-B086-CEBE8D95638C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi2", "WebApi2\WebApi2.csproj", "{C805043A-7EDB-45FF-81BD-F2FC8932682D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65B5D47C-A99F-4E43-9678-6C736D904808}.Debug|x64.ActiveCfg = Debug|x64
+		{65B5D47C-A99F-4E43-9678-6C736D904808}.Debug|x64.Build.0 = Debug|x64
+		{65B5D47C-A99F-4E43-9678-6C736D904808}.Release|x64.ActiveCfg = Release|x64
+		{65B5D47C-A99F-4E43-9678-6C736D904808}.Release|x64.Build.0 = Release|x64
+		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Debug|x64.ActiveCfg = Debug|x64
+		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Debug|x64.Build.0 = Debug|x64
+		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Release|x64.ActiveCfg = Release|x64
+		{692AF14C-EFFA-4D29-A7B8-F6F7108FDCB7}.Release|x64.Build.0 = Release|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Debug|x64.ActiveCfg = Debug|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Debug|x64.Build.0 = Debug|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Debug|x64.Deploy.0 = Debug|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Release|x64.ActiveCfg = Release|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Release|x64.Build.0 = Release|x64
+		{1A0E4A45-6639-49AE-B086-CEBE8D95638C}.Release|x64.Deploy.0 = Release|x64
+		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Debug|x64.ActiveCfg = Debug|x64
+		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Debug|x64.Build.0 = Debug|x64
+		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Release|x64.ActiveCfg = Release|x64
+		{C805043A-7EDB-45FF-81BD-F2FC8932682D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -5,9 +5,6 @@ using System.Runtime.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Actor1.Interfaces;
-using Microsoft.ServiceFabric.Actors;
-using Microsoft.ServiceFabric.Actors.Client;
 
 namespace WebApi1.Controllers
 {

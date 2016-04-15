@@ -7,7 +7,7 @@ using Actor1.Interfaces;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Client;
 
-namespace WebApi1.Controllers
+namespace WebApi2.Controllers
 {
     public class ActorValuesController : ApiController
     {
